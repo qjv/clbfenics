@@ -1,4 +1,4 @@
-`!apt-get install fenics
+```!apt-get install fenics
 from google.colab import files
 
 import platform, sys
@@ -27,4 +27,4 @@ import os, sys, shutil
 dolfin_version = dolfin.__version__
 print ('dolfin version:', dolfin_version)
 
-!rm -rf * # clean up all files`
+!rm -rf * # clean up all files```
