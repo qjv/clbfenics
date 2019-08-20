@@ -1,4 +1,4 @@
-!apt-get install fenics
+`!apt-get install fenics
 from google.colab import files
 
 import platform, sys
@@ -27,9 +27,4 @@ import os, sys, shutil
 dolfin_version = dolfin.__version__
 print ('dolfin version:', dolfin_version)
 
-!rm -rf * # clean up all files
-# Useful commands
-# Remove an empty folder      : os.rmdir("my_results")
-# Remove a folder with files  : shutil.rmtree("results")
-# Make a folder               : os.mkdir("my_results")
-# Runtime/Change_runtime_type/Python3
+!rm -rf * # clean up all files`
