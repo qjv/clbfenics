@@ -1,3 +1,4 @@
+#FEniCS on Colab
 <pre>!apt-get install fenics
 from google.colab import files
 
@@ -28,3 +29,14 @@ dolfin_version = dolfin.__version__
 print ('dolfin version:', dolfin_version)
 
 !rm -rf * # clean up all files</pre>
+
+#Unique for Abaqus Numpy
+<pre>def unique(arr):
+    k=0
+    while k < arr.shape[0]:
+        x = arr[k]
+        barr = (x==arr).all(1)
+        barr[np.where(barr==True)[0][0]] = False
+        arr = np.delete(arr, np.where(barr==True), 0)
+        k+=1
+    return arr</pre>
