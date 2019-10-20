@@ -77,17 +77,3 @@ for ptc in all_particles:
     circle = (ptc.pos[0] + ptc.radius * np.sin([x for x in np.linspace(0,2*np.pi,100)]), ptc.pos[1] + ptc.radius * np.cos([x for x in np.linspace(0,2*np.pi,100)]))
     plt.plot(*circle)
 plt.axis('equal')</pre>
-
-## {Código pra Ju}
-<pre>    if has_linear_algebra_backend("Epetra"):
-        parameters["linear_algebra_backend"] = "Epetra"
-    parameters["form_compiler"]["cpp_optimize"] = True
-    ffc_options = {"quadrature_degree": 6, "optimize": True}
-    problem = NonlinearVariationalProblem(Res, T, bcs, Jac, ffc_options)
-    solver = NonlinearVariationalSolver(problem)
-    prm = solver.parameters
-    prm["newton_solver"]["absolute_tolerance"] = 1E-8
-    prm["newton_solver"]["relative_tolerance"] = 1E-13
-    prm["newton_solver"]["maximum_iterations"] = 15
-    prm['newton_solver']['error_on_nonconvergence'] = False
-    t=0</pre>
